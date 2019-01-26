@@ -1,0 +1,30 @@
+####### 2019-01-26 12:53:56 #######
+$ echo $PWD
+/opt/bitnami/apache2/htdocs
+$ whoami
+daemon
+$ git pull
+error: cannot open .git/FETCH_HEAD: Permission denied
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   deploy.php
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	deploy-log.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+$ git submodule sync
+
+$ git submodule update
+
+$ git submodule status
+
+$ test -e /usr/share/update-notifier/notify-reboot-required && echo "system restart required"
+system restart required
+
