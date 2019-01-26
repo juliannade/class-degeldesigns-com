@@ -1,0 +1,18 @@
+resources:
+- name: class-degeldesigns-com
+  type: git
+  source: 
+    uri: https://github.com/juliannade/class-degeldesigns-com.git
+    branch: master
+
+
+jobs:
+- name: get-class-degeldesigns-com
+  plan:
+  - get: class-degeldesigns-com
+  - task: list
+    config:
+      platform: linux
+      run:
+        path: ls
+        args: [-al]
