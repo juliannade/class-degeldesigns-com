@@ -1,43 +1,12 @@
-<DOCTYPE! html>
+<!DOCTYPE html>
 <head>
-  <style>
-  body {
-    margin: 0;
-  }
-  .header {
-    text-align: center;
-    color: white;
-    font-size: 35px;
-    font-family: sans-serif;
-    background-image: url(https://static01.nyt.com/images/2016/08/16/dining/baron-bagels/baron-bagels-videoSixteenByNineJumbo1600.jpg);
-    background-size: cover;
-    padding: 70px 0 10px 0;
-  }
-h1 {
-  background-color: rgba(0, 0, 0, 0.1);
-  margin: 0;
-}
-
-table {
-  padding-top: 20px;
-}
-
-img {
-  padding: 0 20px 0 20px;
-}
-.outer{
-  text-align: center;
-}
-.row {
-  display: inline-block;
-}
-
-
-  </style>
+  <script src="buttons.js" charset="utf-8"></script>
+  <link rel="stylesheet" type="text/css" href="normalize.css">
+  <link rel="stylesheet" type="text/css" href="home.css">
 </head>
 <body>
 <div class="header">
-<h1> Degelman's Bagels, Man! </h1>
+<h1> Degelman's Bagels, Man!</h1>
 </div>
 <div class="outer">
   <div class="row">
@@ -53,6 +22,16 @@ img {
     <img src="https://kossars.com/wp-content/uploads/2016/01/bagel-garlic-1.jpg" alt="bagel" width="200" height="200">
     <img src="https://kossars.com/wp-content/uploads/2016/01/bagel-garlic-1.jpg" alt="bagel" width="200" height="200">
     <img src="https://kossars.com/wp-content/uploads/2016/01/bagel-garlic-1.jpg" alt="bagel" width="200" height="200">
+  </div>
+</div>
+<div class="outer">
+  <div class="row">
+    <h2>Types of Bagels</h2>
+      <form action="#">
+      	<input type="button" id="Sesame" value="Sesame">
+	      <input type="button" id="Everything" value="Everything">
+    	  <input type="button" id="Cinnamon" value="Cinnamon">
+    </form>
   </div>
 </div>
 </body>

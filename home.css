@@ -1,0 +1,33 @@
+body {
+  margin: 0;
+}
+.header {
+  text-align: center;
+  color: white;
+  font-size: 35px;
+  font-family: sans-serif;
+  background-image: url(https://static01.nyt.com/images/2016/08/16/dining/baron-bagels/baron-bagels-videoSixteenByNineJumbo1600.jpg);
+  background-size: cover;
+  padding: 70px 0 10px 0;
+}
+h1 {
+background-color: rgba(0, 0, 0, 0.1);
+margin: 0;
+}
+
+img {
+padding: 0 20px 0 20px;
+}
+.outer{
+text-align: center;
+}
+.row {
+display: inline-block;
+}
+input[type=button] {
+font-size: 20px;
+padding: 12px 20px;
+box-sizing: border-box;
+outline: none;
+margin: 10px 0;
+}
