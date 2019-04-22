@@ -31,3 +31,12 @@ th, td {
 .winningBG {
 	background-image: url(redFlash.gif);
 }
+
+.centered {
+	text-align: center;
+}
+
+#adBanner {
+	width: 400px;
+	height: 75px;
+}
