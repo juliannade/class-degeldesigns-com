@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Car Picker</title>
+	<link rel="stylesheet" href="form.css">
+	<script src="form.js"></script>
+</head>
+<body>
+<h2 class="centered">Bagel Order Form</h2>
+<form action="someAction.cgi">
+	<p><label for="emailAddr">Email Address:<input id="emailAddr" type="text" size="30" class="reqd email"></label></p>
+	<p>Flavors:
+		<select id="flavor" class="reqd">
+			<option value="" selected>Choose a flavor</option>
+			<option value="Sesame">Sesame</option>
+			<option value="Pumpernickle">Pumpernickle</option>
+			<option value="Plain">Plain</option>
+		</select>
+	</p>
+	<p>Options:
+		<label for="uncut"><input type="radio" name="bagelType"id="uncut" class="radio" value="uncut">Uncut</label>
+		<label for="toasted"><input type="radio" name="bagelType" id="toasted" class="radio" value="toasted">Toasted</label>
+	</p>
+	<p>Creamcheese?&nbsp;&nbsp;
+		<label for="yesCheese"><input type="radio" id="yesCheese" name="creamCheese" value="yesCheese" class="radio">Yes</label>
+		<label for="noCheese"><input type="radio" id="noCheese" name="creamCheese" value="noCheese" class="radio">No</label>
+	</p>
+	<p>
+		<label for="zip">Enter your Zip code:<br><br>
+			Zip: <input id="zip" type="text" size="5" maxlength="5" class="isZip">
+		</label>
+	</p>
+	<p><input type="submit" value="Submit">&nbsp;<input type="reset"></p>
+</form>
+</body>
+</html>
