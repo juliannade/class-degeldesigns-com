@@ -1,0 +1,53 @@
+h1{
+
+text-align: center;
+color: white;
+font-family: 'Quicksand', sans-serif;
+}
+
+img{
+width: 100%;
+}
+
+.card {
+display: inline-block;
+width: 20%;
+padding: 10px;
+}
+
+.cardset{
+  display: inline-block;
+     padding: 10px;
+}
+
+#results{
+  text-align: center;
+  padding: 30px;
+  color: white;
+  font-size: 40px;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.btn {
+
+  text-align: center;
+  border: 1px solid white;
+  padding: 5px;
+}
+
+.board{
+background-color: green;
+padding: 30px;
+    text-align: center;
+}
+
+.button {
+  text-align: center;
+}
+
+a{
+  color: white;
+  text-decoration: none;
+  font-family: 'Quicksand', sans-serif;
+
+}
