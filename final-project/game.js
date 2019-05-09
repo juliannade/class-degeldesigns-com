@@ -31,7 +31,7 @@ function getRoyaltyValues(cardValue){
 }
 
 //renderDeck begings by creating a new empty array and var sum, var randomNum
-// these variables are used to caluclate the sum of the cards and prevent duplicates
+// these variables are used to caluclate the sum of the cards and prevent duplicate
 function renderDeck()
 {
 	document.getElementById('deck').innerHTML = '';
@@ -101,14 +101,14 @@ function myMove()
   elem.id='myAnimation';
   document.getElementById("deck").appendChild(elem);
   var pos = 0;
-  var id = setInterval(frame, 30);
+  var id = setInterval(frame, 5);
   function frame() {
-    if (pos == 55) {
+    if (pos == 500) {
       clearInterval(id);
       myAnimation.style.display='none';
     } else {
       pos++;
-      elem.style.top = pos + '1px';
+      elem.style.top = pos + 'px';
       elem.style.left = pos + 'px';}
     }
   }
