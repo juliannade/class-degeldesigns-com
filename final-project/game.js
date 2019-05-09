@@ -47,9 +47,8 @@ function renderDeck()
  */
   for(var i = 0; i < 3; i++)
 	{
-
-    randomOld.push(randomNum);
     randomNum = Math.floor(Math.random() * deck.length)
+    randomOld.push(randomNum);
     while (randomOld.includes(randomNum)){
       randomNum = Math.floor(Math.random() * deck.length)
       console.log("found a duplicate")
