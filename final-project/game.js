@@ -30,21 +30,14 @@ function getRoyaltyValues(cardValue){
   }
 }
 
-//function renderDeck begins by finding the div with the id "deck"
+//renderDeck begings by creating a new empty array and var sum, var randomNum
+// these variables are used to caluclate the sum of the cards and prevent duplicates
 function renderDeck()
 {
 	document.getElementById('deck').innerHTML = '';
-//create var randomNum
   var randomNum;
-//set var sum to 0
   var sum = 0;
   var randomOld = new Array()
-//begin a for loop starting at 0, and going until 3, incrementing by 1 each time
- /*set randomNum to randomOld in the loop, for the first loop randomNum is
- * is a random number, randomOld then becomes that number and on the second
- * loop randomNum will be a new random number, if not the loop repeats again
- * This will prevent duplicate cards
- */
   for(var i = 0; i < 3; i++)
 	{
     randomNum = Math.floor(Math.random() * deck.length)
@@ -78,11 +71,9 @@ function renderDeck()
 	}
 
   //if the sum is less than or equal to 21, a winning message is printed, along with the score
-  if (sum < 21){
+  if (sum <= 21){
      document.getElementById("results").innerHTML = "You won! Your Score: " + sum, myMove();
-  } else if (sum == 21) {
-  document.getElementById("results").innerHTML = "You won! Your Score: " + sum, myMove();
-} else {
+  }  else {
 
     //if the score is more than 21 then a losing message is displayed
     document.getElementById("results").innerHTML = "You lost. Your Score: " + sum;
@@ -93,7 +84,7 @@ function renderDeck()
 //render deck runs
 renderDeck();
 
-//playAgain is called
+//playAgain is called when the user clicks the play again button
 document.getElementById('play').onclick = playAgain;
 
 //playAgain calls renderDeck
@@ -102,22 +93,22 @@ function playAgain () {
   return false
 }
 
+//creats a bagel animation if a player scores less than 21
 function myMove()
 {
-  //for(var i = 0; i < 3; i++){
   var elem = document.createElement("div");
-  //elem.innerHTML = '<img src="graphics/bagel.png"/>';
   elem.className = 'myAnimation';
+  elem.id='myAnimation';
   document.getElementById("deck").appendChild(elem);
   var pos = 0;
   var id = setInterval(frame, 30);
   function frame() {
-    if (pos == 400) {
+    if (pos == 55) {
       clearInterval(id);
+      myAnimation.style.display='none';
     } else {
       pos++;
       elem.style.top = pos + '1px';
       elem.style.left = pos + 'px';}
     }
   }
-    //}
