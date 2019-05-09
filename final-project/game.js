@@ -38,18 +38,19 @@ function renderDeck()
   var randomNum;
 //set var sum to 0
   var sum = 0;
-
+  var randomOld = new Array()
 //begin a for loop starting at 0, and going until 3, incrementing by 1 each time
+ /*set randomNum to randomOld in the loop, for the first loop randomNum is
+ * is a random number, randomOld then becomes that number and on the second
+ * loop randomNum will be a new random number, if not the loop repeats again
+ * This will prevent duplicate cards
+ */
   for(var i = 0; i < 3; i++)
 	{
-    /*set randomNum to randomOld in the loop, for the first loop randomNum is
-     * is a random number, randomOld then becomes that number and on the second
-     * loop randomNum will be a new random number, if not the loop repeats again
-     * This will prevent duplicate cards
-     */
-    var randomOld = randomNum
+
+    randomOld.push(randomNum);
     randomNum = Math.floor(Math.random() * deck.length)
-    while (randomOld == randomNum){
+    while (randomOld.includes(randomNum)){
       randomNum = Math.floor(Math.random() * deck.length)
       console.log("found a duplicate")
     }
@@ -78,9 +79,11 @@ function renderDeck()
 	}
 
   //if the sum is less than or equal to 21, a winning message is printed, along with the score
-  if (sum <= 21){
-     document.getElementById("results").innerHTML = "You won! Your Score: " + sum;
-  } else {
+  if (sum < 21){
+     document.getElementById("results").innerHTML = "You won! Your Score: " + sum, myMove();
+  } else if (sum == 21) {
+  document.getElementById("results").innerHTML = "You won! Your Score: " + sum, myMove();
+} else {
 
     //if the score is more than 21 then a losing message is displayed
     document.getElementById("results").innerHTML = "You lost. Your Score: " + sum;
@@ -99,3 +102,23 @@ function playAgain () {
   renderDeck();
   return false
 }
+
+function myMove()
+{
+  //for(var i = 0; i < 3; i++){
+  var elem = document.createElement("div");
+  //elem.innerHTML = '<img src="graphics/bagel.png"/>';
+  elem.className = 'myAnimation';
+  document.getElementById("deck").appendChild(elem);
+  var pos = 0;
+  var id = setInterval(frame, 30);
+  function frame() {
+    if (pos == 400) {
+      clearInterval(id);
+    } else {
+      pos++;
+      elem.style.top = pos + '1px';
+      elem.style.left = pos + 'px';}
+    }
+  }
+    //}

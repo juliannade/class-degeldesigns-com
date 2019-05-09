@@ -51,3 +51,11 @@ a{
   font-family: 'Quicksand', sans-serif;
 
 }
+
+.myAnimation {
+  width: 800px;
+  height: 300px;
+  position: absolute;
+  background-image: url("graphics/bagel800x300.png")
+
+}
