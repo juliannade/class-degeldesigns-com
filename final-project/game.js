@@ -48,11 +48,11 @@ function renderDeck()
   for(var i = 0; i < 3; i++)
 	{
     randomNum = Math.floor(Math.random() * deck.length)
-    randomOld.push(randomNum);
     while (randomOld.includes(randomNum)){
       randomNum = Math.floor(Math.random() * deck.length)
       console.log("found a duplicate")
     }
+    randomOld.push(randomNum);
 
     //var card creates a div element
 		var card = document.createElement("div");
