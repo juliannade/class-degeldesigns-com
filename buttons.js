@@ -21,8 +21,13 @@ function jd_saySomething() {
 	}
 }
 
+//looks for the page load event
 window.addEventListener("load",initPage,false);
 
+
+/*initPage creates the date and the expiration date
+as well as creating cookies for the page visits and dates of last visit
+*/
 function initPage() {
 	var now = new Date();
 	var expireDate = new Date();
@@ -36,9 +41,12 @@ function initPage() {
 		lastVisit = "";
 	}
 
-	document.cookie = "pageHit=" + hitCt + ";expires=" + expireDate.toGMTString();
-	document.cookie = "pageVisit=" + now + ";expires=" + expireDate.toGMTString();
+//gets and sets cookies and expiration dates
+	document.cookie = "pageHit=" + hitCt + ";expires=" + expireDate.toUTCString();
+	document.cookie = "pageVisit=" + now + ";expires=" + expireDate.toUTCString();
 
+
+//prints hit count and time/date last visited
 	var outMsg = "You have visited this page " + hitCt + " times.";
 	if (lastVisit != "") {
 		outMsg += "<br>Your last visit was " + lastVisit;
@@ -46,6 +54,7 @@ function initPage() {
 	document.getElementById("cookieData").innerHTML = outMsg;
 }
 
+//this function is used to show all the cookies
 function cookieVal(cookieName) {
 	var thisCookie = document.cookie.split("; ");
 
