@@ -21,7 +21,7 @@ function jd_saySomething() {
 	}
 }
 
-//looks for the page load event
+//looks for the page load event, this is to load the cookie script
 window.addEventListener("load",initPage,false);
 
 
